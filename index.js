@@ -12,8 +12,9 @@ manager.addDocument('es', 'Buenos dias', 'saludo');
 manager.addDocument('es', 'Informacion de la institucion', 'escuela');
 manager.addDocument('es', 'Cuantas carreras tienen?', 'carrerasinf');
 manager.addDocument('es', 'Cuales son esas carreras?', 'carrerasinf');
-
-
+manager.addDocument('es', 'Que talleres ofertan?', 'talleresinf');
+manager.addDocument('es', 'Donde se encuentran ubicados?', 'ubicacioninf');
+manager.addDocument('es', 'Proceso de inscripcion', 'inscripcioninf');
 
 // agregar respuestas 
 manager.addAnswer('es', 'saludo', 'Hola!');
@@ -24,6 +25,10 @@ manager.addAnswer('es', 'saludo', 'Buenas tardes!');
 manager.addAnswer('es', 'escuela', 'El ITSS inicia sus actividades el 4 de Septiembre del año 2000, en las instalaciones de la Escuela Primaria Lic. Tomas Garrido Canabal del Municipio de Teapa, Tabasco; con una matrícula inicial de 211 alumnos distribuidos en las 3 carreras que se ofertan: Lic. En Administración, Licenciatura en Informática e Ingeniería en Bioquímica, atendidos por 10 docentes y 17 administrativos. Actualmente en el ITSS se ofertan 7 carreras, todas a nivel de Ingeniería de las cuales 5 de ellas acreditadas en calidad de los programas académicos: Administración, Informática, Bioquímica, Electromecánica e Industrial; una más en proceso de acreditación: Agronomía.');
 manager.addAnswer('es', 'carrerasinf', 'Siete ingenierias, de las cuales, 5 ya estan acreditadas');
 manager.addAnswer('es', 'carrerasinf', 'Ing. Informatica, Ing. Electromecanica, Ing. Industrial, Ing. en Energias Renovables, Ing. en Administracion de empresas, Ing. Bioquimica y Ing. Agronomia.');
+manager.addAnswer('es', 'talleresinf', 'Contamos con 5 talleres, los cuales son: Futbol, Basquebol, Ajedrez, Taekuondo, Danza, Musica, Voleibol');
+manager.addAnswer('es', 'ubicacioninf', 'Estamos ubicados en: Carret. Teapa-Tacotalpa Km 4.5 Ej. Fco Javier Mina, Teapa, Mexico');
+manager.addAnswer('es', 'inscripcioninf', 'Las inscripciones inician el 2 de Agosto');
+
 
 //entrenando al modelo
 manager.train().then(async ()=>{
