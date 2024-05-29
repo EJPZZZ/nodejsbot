@@ -1,0 +1,434 @@
+{
+  "settings": {
+    "languages": [
+      "es"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "es"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "es": {
+        "settings": {
+          "locale": "es",
+          "trainByDomain": false,
+          "tag": "domain-manager-es",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hol": {
+            "intent": "saludo",
+            "domain": "default"
+          },
+          "hab,que": {
+            "intent": "saludo",
+            "domain": "default"
+          },
+          "como,esta": {
+            "intent": "saludo",
+            "domain": "default"
+          },
+          "que,roll": {
+            "intent": "saludo",
+            "domain": "default"
+          },
+          "buen,dia": {
+            "intent": "saludo",
+            "domain": "default"
+          },
+          "de,el,inform,institu": {
+            "intent": "escuela",
+            "domain": "default"
+          },
+          "carr,cuant,ten": {
+            "intent": "carrerasinf",
+            "domain": "default"
+          },
+          "carr,cual,esa,ser": {
+            "intent": "carrerasinf",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "saludo": "default",
+          "escuela": "default",
+          "carrerasinf": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Hola",
+            "intent": "saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Que hay",
+            "intent": "saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como estas?",
+            "intent": "saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Que rollo",
+            "intent": "saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Buenos dias",
+            "intent": "saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Informacion de la institucion",
+            "intent": "escuela"
+          },
+          {
+            "domain": "default",
+            "utterance": "Cuantas carreras tienen?",
+            "intent": "carrerasinf"
+          },
+          {
+            "domain": "default",
+            "utterance": "Cuales son esas carreras?",
+            "intent": "carrerasinf"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "es",
+              "tag": "nlu-es",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hol": 1,
+              "que": 1,
+              "hab": 1,
+              "como": 1,
+              "esta": 1,
+              "roll": 1,
+              "buen": 1,
+              "dia": 1,
+              "inform": 1,
+              "de": 1,
+              "el": 1,
+              "institu": 1,
+              "cuant": 1,
+              "carr": 1,
+              "ten": 1,
+              "cual": 1,
+              "ser": 1,
+              "esa": 1
+            },
+            "intents": {
+              "saludo": 1,
+              "escuela": 1,
+              "carrerasinf": 1
+            },
+            "intentFeatures": {
+              "saludo": {
+                "hol": 1,
+                "que": 1,
+                "hab": 1,
+                "como": 1,
+                "esta": 1,
+                "roll": 1,
+                "buen": 1,
+                "dia": 1
+              },
+              "escuela": {
+                "inform": 1,
+                "de": 1,
+                "el": 1,
+                "institu": 1
+              },
+              "carrerasinf": {
+                "cuant": 1,
+                "carr": 1,
+                "ten": 1,
+                "cual": 1,
+                "ser": 1,
+                "esa": 1
+              }
+            },
+            "featuresToIntent": {
+              "hol": [
+                "saludo"
+              ],
+              "que": [
+                "saludo"
+              ],
+              "hab": [
+                "saludo"
+              ],
+              "como": [
+                "saludo"
+              ],
+              "esta": [
+                "saludo"
+              ],
+              "roll": [
+                "saludo"
+              ],
+              "buen": [
+                "saludo"
+              ],
+              "dia": [
+                "saludo"
+              ],
+              "inform": [
+                "escuela"
+              ],
+              "de": [
+                "escuela"
+              ],
+              "el": [
+                "escuela"
+              ],
+              "institu": [
+                "escuela"
+              ],
+              "cuant": [
+                "carrerasinf"
+              ],
+              "carr": [
+                "carrerasinf"
+              ],
+              "ten": [
+                "carrerasinf"
+              ],
+              "cual": [
+                "carrerasinf"
+              ],
+              "ser": [
+                "carrerasinf"
+              ],
+              "esa": [
+                "carrerasinf"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "es",
+                "tag": "nlu-es",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hol",
+                "que",
+                "hab",
+                "como",
+                "esta",
+                "roll",
+                "buen",
+                "dia",
+                "inform",
+                "de",
+                "el",
+                "institu",
+                "cuant",
+                "carr",
+                "ten",
+                "cual",
+                "ser",
+                "esa"
+              ],
+              "intents": [
+                "saludo",
+                "escuela",
+                "carrerasinf"
+              ],
+              "perceptrons": [
+                [
+                  6.866633892059326,
+                  4.842953681945801,
+                  2.443527936935425,
+                  3.646678924560547,
+                  3.646678924560547,
+                  2.4037673473358154,
+                  3.648343801498413,
+                  3.648343801498413,
+                  -1.7567135095596313,
+                  -1.7567135095596313,
+                  -1.7567135095596313,
+                  -1.7567135095596313,
+                  -1.9134668111801147,
+                  -3.194154977798462,
+                  -1.9134668111801147,
+                  -1.2783818244934082,
+                  -1.2783818244934082,
+                  -1.2783818244934082,
+                  7.037796688923683
+                ],
+                [
+                  -0.5784326195716858,
+                  -0.5124453902244568,
+                  -0.259352445602417,
+                  -0.3370722234249115,
+                  -0.3370722234249115,
+                  -0.23206691443920135,
+                  -0.33276137709617615,
+                  -0.33276137709617615,
+                  3.4225246906280518,
+                  3.4225246906280518,
+                  3.4225246906280518,
+                  3.4225246906280518,
+                  -0.22947640717029572,
+                  -0.4322168827056885,
+                  -0.22947640717029572,
+                  -0.17230331897735596,
+                  -0.17230331897735596,
+                  -0.17230331897735596,
+                  0.5951366136455032
+                ],
+                [
+                  -1.1141819953918457,
+                  -0.9003576636314392,
+                  -0.4674105644226074,
+                  -0.61543869972229,
+                  -0.61543869972229,
+                  -0.40474438667297363,
+                  -0.6061681509017944,
+                  -0.6061681509017944,
+                  -0.35776275396347046,
+                  -0.35776275396347046,
+                  -0.35776275396347046,
+                  -0.35776275396347046,
+                  3.5782368183135986,
+                  5.964665412902832,
+                  3.5782368183135986,
+                  2.3858180046081543,
+                  2.3858180046081543,
+                  2.3858180046081543,
+                  1.1610579708946591
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "es",
+        "Hola"
+      ],
+      [
+        "es",
+        "Que hay"
+      ],
+      [
+        "es",
+        "Como estas?"
+      ],
+      [
+        "es",
+        "Que rollo"
+      ],
+      [
+        "es",
+        "Buenos dias"
+      ],
+      [
+        "es",
+        "Informacion de la institucion"
+      ],
+      [
+        "es",
+        "Cuantas carreras tienen?"
+      ],
+      [
+        "es",
+        "Cuales son esas carreras?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "es": {
+        "saludo": [
+          {
+            "answer": "Hola!"
+          },
+          {
+            "answer": "Que tal?"
+          },
+          {
+            "answer": "Buen dia!"
+          },
+          {
+            "answer": "Buenas noches!"
+          },
+          {
+            "answer": "Buenas tardes!"
+          }
+        ],
+        "escuela": [
+          {
+            "answer": "El ITSS inicia sus actividades el 4 de Septiembre del año 2000, en las instalaciones de la Escuela Primaria Lic. Tomas Garrido Canabal del Municipio de Teapa, Tabasco; con una matrícula inicial de 211 alumnos distribuidos en las 3 carreras que se ofertan: Lic. En Administración, Licenciatura en Informática e Ingeniería en Bioquímica, atendidos por 10 docentes y 17 administrativos. Actualmente en el ITSS se ofertan 7 carreras, todas a nivel de Ingeniería de las cuales 5 de ellas acreditadas en calidad de los programas académicos: Administración, Informática, Bioquímica, Electromecánica e Industrial; una más en proceso de acreditación: Agronomía."
+          }
+        ],
+        "carrerasinf": [
+          {
+            "answer": "Siete ingenierias, de las cuales, 5 ya estan acreditadas"
+          },
+          {
+            "answer": "Ing. Informatica, Ing. Electromecanica, Ing. Industrial, Ing. en Energias Renovables, Ing. en Administracion de empresas, Ing. Bioquimica y Ing. Agronomia."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
